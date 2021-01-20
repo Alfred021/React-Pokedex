@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch, NavLink} from 'react-router-dom';
 import Info from './infopage.js';
 import './main.css'
+import Home from './home.js';
 
 const Main = () => {
     const [displayModal, setDisplayModal] = useState(false)
@@ -15,7 +16,7 @@ const Main = () => {
                         X
                     </button>
                 </div>
-                <ul style={{"list-style-type" : "none"}}>
+                <ul style={{"listStyleType" : "none"}}>
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/info">Info</NavLink></li>
                 </ul>
@@ -27,11 +28,7 @@ const Main = () => {
 
         <Switch>
             <Route path="/" exact>
-                <div>
-                    <input type="search" placeholder="Search Pokemon"></input>
-                    <button type="search">Search</button>
-                </div>
-            <p>Pokemon List</p>
+                <Home/>
             </Route>
 
             <Route path="/info">
