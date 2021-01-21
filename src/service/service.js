@@ -6,12 +6,12 @@ import {
     getPokemonListFromStorage 
     } from '../storage/storage.js';
 
-export const getPokemonFromList = async (url) => {
+export const getPokemonFromList = async (page) => {
     try {
-        return getPokemonListFromStorage(url)
+        return getPokemonListFromStorage("page " + page)
     } catch(e) {
-        const pokemonList = await getPokemonList(url)
-        savePokemonListOnStorage(pokemonList)
+        const pokemonList = await getPokemonList(page)
+        savePokemonListOnStorage("page " + page, pokemonList)
         return pokemonList;
     }  
 }

@@ -1,14 +1,14 @@
-export const savePokemonListOnStorage = (url, pokemon) => {
+export const savePokemonListOnStorage = (page, pokemon) => {
     try {
-        localStorage.setItem(url, JSON.stringify(pokemon))
+        localStorage.setItem(page, JSON.stringify(pokemon))
     } catch(e) {
         localStorage.clear()
-        localStorage.setItem(url, JSON.stringify(pokemon))
+        localStorage.setItem(page, JSON.stringify(pokemon))
     }
 }
 
-export const getPokemonListFromStorage = (url) => {
-    const pokemonList = JSON.parse(localStorage.getItem(url))
+export const getPokemonListFromStorage = (page) => {
+    const pokemonList = JSON.parse(localStorage.getItem(page))
     if (pokemonList === null) {
         throw new Error("Pokemon List not found in Storage")
     }

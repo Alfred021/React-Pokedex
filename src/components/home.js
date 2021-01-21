@@ -1,19 +1,13 @@
 import React, { useState } from 'react';
-import GetPokemonData from './hooks/pokemonData.js';
+import GetPokemonData from '../hooks/pokemonData.js';
+import { useParams } from 'react-router-dom';
 
-const Home = () => {
-    const [searchTerm, setSearchTerm] = useState('')
-    const { pokemon } = GetPokemonData(searchTerm, 1000)
-
-    console.log(pokemon)
+const Home = () => { 
+    const { name } = useParams();
+    const { pokemon } = GetPokemonData(name)
 
     return (
         <>
-        <div>
-            <input type="search" placeholder="Search Pokemon" onChange={(e) => setSearchTerm(e.target.value)} value={searchTerm}></input>
-            <button type="search">Search</button>
-        </div>
-
         {pokemon && (
             <div>
                 {pokemon.map((result) => {

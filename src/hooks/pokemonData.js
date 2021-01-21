@@ -1,47 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { getPokemonInfo } from '../service/service.js';
 
-const GetPokemonData = (name, timeout) => {
-    const [pokemon, setPokemon] = useState([]);
-    console.log(pokemon)
+const GetPokemonData = (pokemonName) => {
+    const [pokemon, setPokemon] = useState(null);
+
     useEffect(() => {
-        const pokeTimeout = setTimeout(async () => {
-            if (name) {
-                setPokemon(null)
-                try {
-                    const data = await getPokemonInfo(name)
-                    setPokemon([data]);
-                } catch(e){
-                    console.log(e)
-                }
-            } else {
-                setPokemon(null)
-            }       
-        }, timeout);
-        return () => {
-            clearTimeout(pokeTimeout)
+        const data = async () => {
+            const data = await getPokemonInfo(pokemonName)
+            return setPokemon([data]);
         }
-    }, [name, timeout])
+        data();
+    }, [pokemonName])
 
     return { pokemon };
 }
 
 export default GetPokemonData;
-
-/* useEffect(() => {
-    const pokeTimeout = setTimeout(async () => {
-        if (name) {
-            setPokemon(null)
-            try {
-                const data = await getPokemonInfo(name)
-                setPokemon([data]);
-            } catch(e){
-                console.log(e)
-            }
-        } else {
-            setPokemon(null)
-        }       
-    }, timeout);
-    return () => {
-        clearTimeout(pokeTimeout)
-    } */
