@@ -26,14 +26,17 @@ const Main = () => {
                 </ul>
             </div>
         <header>
-            <button className="menu" type="button" onClick={() => setDisplayModal(true)}>Menu</button>
+            <div className="menu">
+                <button className="menu" type="button" onClick={() => setDisplayModal(true)}>Menu</button>
+            </div>
+
             <h1>Pokedex</h1>
-            <div>   
-                    
+
+            <div className="search-bar">      
                     <input type="search" placeholder="Search Pokemon" onChange={(e) => setSearchTerm(e.target.value)} value={searchTerm}></input>    
-                        <NavLink to={`/pokemon/${searchTerm}`}> 
-                        <button type="button" onClick={() => setPokemonName(searchTerm)}>Search</button>
-                        </NavLink>
+                    <NavLink to={`/pokemon/${searchTerm}`}> 
+                    <button type="button" onClick={() => setPokemonName(searchTerm)}>Search</button>
+                    </NavLink>
             </div>
         </header>
 
@@ -54,7 +57,19 @@ const Main = () => {
         onClick={() => setDisplayModal(false)}
         ></div>
         <footer>
-            <p>Linkedin, Github, Mail</p>
+            <div className="navigation">
+                <span>Navigate: </span>
+                <span><NavLink to={`/pokemon/:${pokemonName}`}>Home </NavLink></span>
+                <span><NavLink to="/info">Info </NavLink></span>
+                <span><NavLink to="/">List </NavLink></span>
+
+            </div>
+            
+            <div className="logos">
+                <a href="https://github.com/Alfred021/React-Pokedex" target="_blank" rel="noreferrer"><span><img alt="github" src="https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-github-1.png" width="35px" height="35px"></img></span></a>
+                <a href="https://www.linkedin.com/in/alfredo-david-medina-lugo-177b461b4/" target="_blank" rel="noreferrer"><span><img alt="linkedin" src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png" width="35px" height="35px"></img></span></a>
+                <a href="mailto: alfred.med.barca.9@gmail.com"><span><img alt="email" src="https://icons-for-free.com/iconfiles/png/512/mail+message+new+send+icon-1320166532032442575.png" width="35px" height="35px"></img></span></a>
+            </div>
         </footer>
         </Router>
     )

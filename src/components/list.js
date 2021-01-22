@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 
 const List = () => {
     const { pokemons, setPage, page} = GetPokemons();
-    console.log(pokemons)
 
     const nextPage = () => {
         return setPage(page => page + 20)
