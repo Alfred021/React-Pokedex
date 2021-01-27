@@ -1,9 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch, NavLink} from 'react-router-dom';
 import Info from './infopage.js';
-import '../main.css'
+import '../app-css/main.css'
 import Home from './home.js';
-import List from './list.js'
+import List from './list.js';
+import logo from '../images/pokemon-23-logo-png-transparent.png'
 
 const Main = () => {
     const [displayModal, setDisplayModal] = useState(false)
@@ -27,15 +28,15 @@ const Main = () => {
             </div>
         <header>
             <div className="menu">
-                <button className="menu" type="button" onClick={() => setDisplayModal(true)}>Menu</button>
+                <button className="menu-button" type="button" onClick={() => setDisplayModal(true)}>Menu</button>
             </div>
 
-            <h1>Pokedex</h1>
+            <img className="title" alt="Pokedex" src={logo}></img>
 
-            <div className="search-bar">      
-                    <input type="search" placeholder="Search Pokemon" onChange={(e) => setSearchTerm(e.target.value)} value={searchTerm}></input>    
+            <div className="search-bar">  
+                    <input className="search-input" type="search" placeholder="Search Pokemon" onChange={(e) => setSearchTerm(e.target.value)} value={searchTerm}></input>    
                     <NavLink to={`/pokemon/${searchTerm}`}> 
-                    <button type="button" onClick={() => setPokemonName(searchTerm)}>Search</button>
+                    <button className="search-button" type="button" onClick={() => setPokemonName(searchTerm)}>Search</button>
                     </NavLink>
             </div>
         </header>
@@ -62,7 +63,6 @@ const Main = () => {
                 <span><NavLink to={`/pokemon/:${pokemonName}`}>Home </NavLink></span>
                 <span><NavLink to="/info">Info </NavLink></span>
                 <span><NavLink to="/">List </NavLink></span>
-
             </div>
             
             <div className="logos">

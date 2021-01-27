@@ -47,17 +47,16 @@ body {
     display: block;
 }
 
-.menu > button {
+.menu-button {
     cursor: pointer;
     margin: 0 0 12px;
     background-color: #fff;
-    border-color: #dbdbdb;
-    border-width: 1px;
+    border: 1px solid grey;
     color: #363636;
-    border-radius: 4px;
-    box-shadow: none;
+    border-radius: 1em;
     display: inline-flex;
-    font-size: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
     height: 2.5em;
     line-height: 1.5em;
     padding: 0.5em 0.5em 0.5em 0.5em;
@@ -79,10 +78,6 @@ body {
 
 .menu {
     float: left;
-    font-size: 1.5em;
-    border: 1px solid seashell;
-    background-color: transparent;
-    border-radius: 1em; 
     vertical-align: middle;
     padding-top: 0.7em;
 }
@@ -96,10 +91,13 @@ header {
     border-width: 2px;
 }
 
-h1 {
-    text-align: center;
+.title {
+    display: block;
+    margin: 0 auto;
     padding-top: 1em;
-    margin-top: 0;
+    padding-bottom: 1em;
+    width: 11em;
+    max-width: 100%;
 }
 
 footer {
@@ -116,6 +114,23 @@ footer {
     text-align: center;
     bottom: 0;
     padding-bottom: 1em;
+}
+
+.search-input {
+    padding: 1em 0;
+    margin: 0 1em;
+    border-radius: 0.5em;
+}
+
+.search-button {
+    padding: 1em 1.5em;
+    border-radius: 0.5em;
+    color: white;
+    background-color: orange
+}
+
+.search-bar > button {
+    padding: 1em 2em;
 }
 
 .navigation {

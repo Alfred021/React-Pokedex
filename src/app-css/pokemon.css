@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+.pokemon-body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1024px;
+    display: block;
+}
+
+.pokemon-body::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.pokemon-card {
+    border: 1.5px solid;
+    border-radius: 1em;
+    text-align: center;
+    float: left;
+    width: 45%;
+    display: block;
+    margin-left: 2em;
+}
+
+.pokemon-image {
+    float: left;
+    width: 100%;
+    display: block;
+}
+
+.pokemon-card > p {
+    border-bottom: 1px solid black;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    padding-bottom: 0.8em;
+}
+
+.pokemon-info {  
+    display: block;
+    float: left;
+    width: 45%;
+    text-align: center;
+    font-size: 100%;
+    margin-left: 2em;
+}
+
+.pokemon-stats {
+    width: 100%;
+    border: 1.5px solid;
+    border-radius: 1em;
+    display: block;
+    float: left;
+    position: relative;
+    font-size: 100%;
+}
+
+.pokemon-attributes {
+    width: 100%;
+    border-radius: 1em;
+    border: 1.5px solid;
+    display: block;
+    margin-bottom: 1em;
+    float: left;
+    text-align: left;
+    font-size: 100%;
+    position: relative;
+}
+
+
+td {
+    text-align: left;
+}
+
+th {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.attributes-column-1 {
+    float: left;
+    width: 50%;
+}
+
+.attributes-column-2 {
+    float: left;
+    width: 50%;
+}
+
+.attibutes-list-1 {
+    padding-left: 10px;
+    list-style: none;
+    float: left;
+    width: 100%;
+    font-size: 100%;
+}
+
+.attibutes-list-2 {
+    padding-left: 10px;
+    list-style: none;
+    float: left;
+    width: 100%;
+    font-size: 100%;
+}   
+
+.attribute-title {
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+.attribute-value {
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+.types {
+    float: left;
+    width: 50%;
+    text-align: center;
+    margin: 0.5em 0 0 0;
+    padding: 0;
+}
+
+.types > p {
+    float: left;
+    display: block;
+    line-height: 100%;
+    padding: 0.5em 0;
+    width: 100%;
+    font-size: 100%;
+}
+
+
