@@ -23,7 +23,7 @@ const List = () => {
             {pokemons.results.map((result) => {
                     return (            
                             <li className="list" key={result.name}>
-                                <NavLink to={`/pokemon/${result.name}`}>
+                                <NavLink className="link-to-pokemon" to={`/pokemon/${result.name}`}>
                                     <Preview name={result.name}/> 
                                 </NavLink>
                             </li>         

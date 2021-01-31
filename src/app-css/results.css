@@ -14,6 +14,7 @@
     width: 85%;
     max-width: 1024px;
     display: block;
+    background-color: white;
 }
 
 .results {
@@ -57,12 +58,21 @@ ul {
     text-transform: capitalize;
 }
 
+.link-to-pokemon {
+    text-decoration: none;
+    color: #313131;
+    font-size: 100%;
+}
+
 .navigate-pages {
+    margin: 0 auto;
     text-align: center;
     padding-top: 2em;
     padding-bottom: 2em;
     display: block;
-    width: 100%;
+    width: 85%;
+    max-width: 1024px;
+    background-color: white;
 }
 
 .navigate-pages > span {
