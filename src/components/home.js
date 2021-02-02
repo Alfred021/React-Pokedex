@@ -41,7 +41,7 @@ const Home = () => {
                                         {result.types.map((type) => {
                                             return (
                                             <li className="types">
-                                                <p>{type.type.name}</p>
+                                                <p className={type.type.name}>{type.type.name}</p>
                                             </li>
                                             )
                                         })}
@@ -56,7 +56,7 @@ const Home = () => {
                                 <p className="attribute-title">Skills:</p>
                                     {result.abilities.map((ability) => {
                                         return (
-                                            <p className="attribute-value">{ability.ability.name}</p>
+                                            <p className="skill">{ability.ability.name}</p>
                                         )
                                     })}
                                     </li>

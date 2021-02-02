@@ -21,7 +21,6 @@ const Main = () => {
                     </button>
                 </div>
                 <ul style={{"listStyleType" : "none"}}>
-                    <li><NavLink className="section" to={`/pokemon/:${pokemonName}`}>Home</NavLink></li>
                     <li><NavLink className="section" to="/info">Info</NavLink></li>
                     <li><NavLink className="section" to="/">List</NavLink></li>
                 </ul>
@@ -60,7 +59,6 @@ const Main = () => {
         <footer>
             <div className="navigation">
                 <span>Navigate: </span>
-                <span><NavLink className="navigation-link" to={`/pokemon/:${pokemonName}`}>Home </NavLink></span>
                 <span><NavLink className="navigation-link" to="/info">Info </NavLink></span>
                 <span><NavLink className="navigation-link" to="/">List </NavLink></span>
             </div>

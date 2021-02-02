@@ -127,13 +127,13 @@ header {
 footer {
     bottom: 0;
     width: 100%;
-    margin-top: 1em;
     border-top: 1px solid black;
     border-width: 2px;
     text-align: center;
-    padding: 2em 3em 4em 3em;
+    padding: 2em 3em 4em 4em;
     background-color: #242526;
     color: #fff;
+    height: 100%;
 }
 
 .search-bar {
@@ -193,4 +193,29 @@ footer {
 span {
     padding-right: 2em;
     padding-left: 1em;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        padding-top: 1em;
+        float: left;
+        padding-bottom: 1em;
+        text-align: center;
+        width: 100%;
+    }
+
+    .logos {
+        float: right;
+        width: 100%;
+    }
+
+    footer {
+        padding-top: 1em;
+        padding-bottom: 8em;
+    }
+
+    span {
+        padding-right: 0em;
+        padding-left: 0em;
+    }
 }

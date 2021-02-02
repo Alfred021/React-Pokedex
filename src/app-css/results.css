@@ -15,14 +15,18 @@
     max-width: 1024px;
     display: block;
     background-color: white;
+    position: relative;
+    justify-content: center;
 }
 
 .results {
     float: left;
+    margin: 0 auto;
 }
 
 ul {
-   list-style: none;
+    margin: 0 auto;
+    padding-left: 1.2em;
 }
 
 .list {
