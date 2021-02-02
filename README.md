@@ -1,3 +1,9 @@
+# Pokedex
+
+This project was created using create-react-app, react-router and [PokeApi](https://pokeapi.co/) as the RESTful Api for the pokemon data.
+
+# Getting Started with Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
