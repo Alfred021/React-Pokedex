@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Switch, NavLink} from 'react-router-dom';
+import { HashRouter as Router, Route, Switch, NavLink} from 'react-router-dom';
 import Info from './infopage.js';
 import '../app-css/main.css'
 import Home from './home.js';
@@ -41,15 +41,15 @@ const Main = () => {
         </header>
 
         <Switch>
-            <Route exact path="/">
+            <Route path="/" exact>
                 <List/>
             </Route>
 
-            <Route path='/pokemon/:name'>
+            <Route path='/pokemon/:name' exact>
                 <Home />
             </Route>
 
-            <Route path="/info">
+            <Route path="/info" exact>
                 <Info/>
             </Route>
         </Switch>
