@@ -11,29 +11,34 @@
 
 .pokemon-results {
     margin: 0 auto;
-    width: 85%;
+    width: 100%;
     max-width: 1024px;
     display: block;
     background-color: white;
     position: relative;
     justify-content: center;
+    background: gray left top;
 }
 
 .results {
+    padding: 1em 0;
+    background-color:white;
     float: left;
-    margin: 0 auto;
-    width: 100%;
+    margin-right: -100%;
+    width: 85%;
+    margin-left: 7.25%
 }
 
 ul {
-    padding-left: 1.2em;
+    list-style: none;
 }
 
 .list {
     display: block;
     float:left;
     position: relative;
-    margin: 0.5em 0.5em 0.5em 0em;
+    margin: 0 .78125% 50px;
+    width: 23.43%;
 }
 
 .preview-figure {
@@ -53,13 +58,15 @@ ul {
 }
 
 .pokemon-name {
-    text-align: center;
-    padding-left: 2em;
+    padding-left: 0.5em;
+    padding-top: 1em;
     border-top: none;
     margin: 0 auto;
     font-weight: bold;
     font-size: 1em;
     text-transform: capitalize;
+    color: #313131;
+    font-size: 145%;
 }
 
 .link-to-pokemon {
@@ -69,7 +76,8 @@ ul {
 }
 
 .navigate-pages {
-    margin: 0 auto;
+    margin-right: -100%;
+    margin-left: 7.25%;
     text-align: center;
     padding-top: 2em;
     padding-bottom: 2em;
@@ -93,3 +101,44 @@ ul {
     box-shadow: none;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .list {
+        width: 31.43%;
+    }
+}
+
+@media screen and (min-width: 510px) and (max-width: 767px) {
+    .list {
+        width: 48.43%
+    }
+}
+
+@media screen and (max-width: 509px) {
+    .list {
+        width: 98.43%
+    }
+}
+
+@media (min-width: 461px) and (max-width: 720px) {
+    .list {
+        width: 48.43%
+    }
+}
+
+@media (min-width: 721px) and (max-width: 1024px) {
+    .pokemon-name {
+        font-size: 120%
+    }
+}
+
+@media (min-width: 461px) and (max-width: 720px) {
+    .pokemon-name {
+        font-size: 115%
+    }
+}
+
+@media (min-width: 1px) and (max-width: 460px) {
+    .pokemon-name {
+        font-size: 115%
+    }
+}

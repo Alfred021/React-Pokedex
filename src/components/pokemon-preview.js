@@ -15,7 +15,7 @@ const Preview = ({name}) => {
                     <figure className="preview-figure">
                         <img className="pokemon-pic" alt={result.name} src={result.sprites.front_default}></img>
                     </figure>
-                    <p className="pokemon-name">{`#${result.id } ${result.name}`}</p>  
+                    <h5 className="pokemon-name">{`#${result.id } ${result.name}`}</h5>  
                     </>
                     )
                 })}
