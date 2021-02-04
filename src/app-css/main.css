@@ -31,6 +31,7 @@ body {
 
 .modal > div > h3 {
     color: #fff;
+    margin: 1em 0;
 }
 
 .section {
@@ -39,7 +40,7 @@ body {
     color: #fff;
     cursor: pointer;
     line-height: 2em;
-    padding: 0.37em 0.5em;
+    padding: 0.37em 1em;
     border-radius: 0.25em;
 }
 
@@ -78,7 +79,7 @@ body {
     font-weight: bold;
     height: 2.5em;
     line-height: 1.5em;
-    padding: 0.5em 0.5em 0.5em 0.5em;
+    padding: 0.5em 0.3em 0.5em 0.3em;
     position: absolute;
     text-align: center;
     justify-content: center;
@@ -89,7 +90,6 @@ body {
 }
 
 .close {
-    padding-top: 1em;
     cursor: pointer;
     position: absolute;
     top: 2em;
@@ -103,7 +103,7 @@ body {
 .menu {
     float: left;
     vertical-align: middle;
-    padding-top: 0.7em;
+    padding: 0.7em 0.5em;
 }
 
 
@@ -169,6 +169,7 @@ footer {
     float: left;
     padding-right: 1em;
     padding-left: 1em;
+    font-size: 120%;
 }
 
 .navigation-link {
@@ -202,6 +203,7 @@ span {
         padding-bottom: 1em;
         text-align: center;
         width: 100%;
+        font-size: 100%;
     }
 
     .logos {
@@ -215,7 +217,22 @@ span {
     }
 
     span {
-        padding-right: 0em;
-        padding-left: 0em;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+    }
+}
+@media screen and (max-width: 400px) {
+    .navigation {
+        padding-top: 1em;
+        float: left;
+        padding-bottom: 1em;
+        text-align: center;
+        width: 100%;
+        font-size: 80%;
+    }
+
+    span {
+        padding-right: 0.3em;
+        padding-left: 0.3em;
     }
 }

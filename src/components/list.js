@@ -34,10 +34,12 @@ const List = () => {
             }
         </section>
         
-        <div className="navigate-pages">
-            <span onClick={prevPage}>Prev</span>
-            <span onClick={nextPage}>Next</span>
-        </div>
+        <section className="pagination">
+            <div className="navigate-pages">
+                <span onClick={prevPage}>Prev</span>
+                <span onClick={nextPage}>Next</span>
+            </div>
+        </section>
         </>
     )
 }
