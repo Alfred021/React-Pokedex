@@ -12,7 +12,6 @@ const GetPokemons = () => {
         }
         pokemonList();   
     }, [page])
-    console.log(pokemons)
 
     return {pokemons, setPage, page}
 }

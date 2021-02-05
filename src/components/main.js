@@ -30,12 +30,16 @@ const Main = () => {
                 <button className="menu-button" type="button" onClick={() => setDisplayModal(true)}>Menu</button>
             </div>
 
-            <img className="title" alt="Pokedex" src={logo}></img>
+            
+            <NavLink to="/">
+                <img className="title" alt="Pokedex" src={logo}></img>
+            </NavLink>
+            
 
             <div className="search-bar">  
                     <input className="search-input" type="search" placeholder="Search Pokemon" onChange={(e) => setSearchTerm(e.target.value)} value={searchTerm}></input>    
-                    <NavLink to={`/pokemon/${searchTerm}`}> 
-                    <button className="search-button" type="button" onClick={() => setPokemonName(searchTerm)}>Search</button>
+                    <NavLink to={`/pokemon/${searchTerm.toLowerCase()}`}> 
+                    <button className="search-button" type="button" onClick={() => setPokemonName(searchTerm.toLowerCase())}>Search</button>
                     </NavLink>
             </div>
         </header>

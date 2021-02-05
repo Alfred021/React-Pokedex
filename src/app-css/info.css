@@ -27,13 +27,31 @@
 
 .intro > h2 {
     text-align: center;
+    margin: 1em 0;
+}
+
+.intro > p {
+    margin: 1em 0;
 }
 
 .features {
     display: block;
     width: 100%;
     justify-content: center;
+    padding-top: 1em;
+    padding-left: 1em;
 }
+
+.features > h3, h4 {
+    margin: 1em 0;
+}
+
+.features > ul {
+    list-style-type: square;
+    padding-left: 2em;
+    margin: 1em 0;
+}
+
 
 .pokedex-image-container {
     display: block;
