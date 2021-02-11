@@ -5,6 +5,7 @@ import '../app-css/main.css'
 import Home from './home.js';
 import List from './list.js';
 import logo from '../images/pokemon-23-logo-png-transparent.png'
+import Loading from './loading.js'
 
 const Main = () => {
     const [displayModal, setDisplayModal] = useState(false)

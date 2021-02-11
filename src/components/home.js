@@ -2,15 +2,34 @@ import React, { useState } from 'react';
 import GetPokemonData from '../hooks/pokemonData.js';
 import { useParams } from 'react-router-dom';
 import '../app-css/pokemon.css';
+import Loading from './loading.js'
 
 const Home = () => { 
     const { name } = useParams();
-    const { pokemon } = GetPokemonData(name)
+    const { pokemon, loading, error } = GetPokemonData(name)
 
     return (
-        <>
-        {pokemon && (
+        <>  
+        
             <section className="pokemon-body">
+
+            {loading && <Loading/>}
+
+            {error && (
+                <div className="error-container">
+                    <h3 className="error-title">No Pokémon matched your search</h3>
+                    <p className="error-text sub-title">Try these suggestions to find a pokemon</p>
+                    <ul className="suggestions">
+                        <li><p className="error-text">Reduce the number of search characters</p></li>
+                        <li><p className="error-text">Search only for one pokemon at a time</p></li>
+                        <li><p className="error-text">Do not type special characters, only letters or numbers (not both at the same time)</p></li>
+                        <li><p className="error-text">If you know the Pokemon's ID, you can type the number on the search box</p></li>
+                    </ul>
+                </div>
+            )}
+            
+            {pokemon && (
+                <>
                 {pokemon.map((result) => {
                     return (
                         <>
@@ -111,10 +130,10 @@ const Home = () => {
                     </div>
                     </>
                     )
-                })
-                }
-            </section>
-        )}
+                })}
+                </>
+            )}     
+        </section>
         </>
     )
 }

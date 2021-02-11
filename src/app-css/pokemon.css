@@ -238,3 +238,39 @@ tbody > tr > td > p {
         margin-left: 0;
     }
 }
+
+.error-container {
+  border: 2px solid red;
+  border-radius: 1em;
+  margin: 1.5em 0.5em;
+  color: grey;
+}
+
+.error-title {
+  color: red;
+  text-transform: none;
+  font-size: 150%;
+  margin: 1em 1em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.error-text {
+  font-size: 120%;
+  margin-left: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.sub-title {
+  font-weight: bold;
+  font-family:sans-serif
+}
+
+.suggestions {
+  margin: 1em;
+  list-style-type: disc;
+}
+
+.suggestions > li {
+  margin-left: 1.5em;
+}
