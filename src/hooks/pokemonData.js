@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getPokemonInfo } from '../service/service.js';
 
 const GetPokemonData = (pokemonName) => {

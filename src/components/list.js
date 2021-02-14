@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import GetPokemons from '../hooks/pokemonList.js';
 import { NavLink } from 'react-router-dom';
 import Preview from './pokemon-preview.js';

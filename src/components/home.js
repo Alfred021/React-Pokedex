@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import GetPokemonData from '../hooks/pokemonData.js';
 import { useParams } from 'react-router-dom';
 import '../app-css/pokemon.css';
