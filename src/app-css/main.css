@@ -133,7 +133,8 @@ footer {
     padding: 2em 3em 4em 4em;
     background-color: #242526;
     color: #fff;
-    height: 100%;
+    height: 10%;
+    display: block;
 }
 
 .search-bar {

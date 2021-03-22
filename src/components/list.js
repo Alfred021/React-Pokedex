@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
 import GetPokemons from '../hooks/pokemonList.js';
 import { NavLink } from 'react-router-dom';
 import Preview from './pokemon-preview.js';
 import '../app-css/results.css';
+import Loading from './loading.js'
 
 const List = () => {
-    const { pokemons, setPage, page} = GetPokemons();
+    const { pokemons, setPage, page, error, loading } = GetPokemons();
 
     const nextPage = () => {
         return setPage(page => page + 20)
@@ -17,9 +17,21 @@ const List = () => {
 
     return (
         <>
+
         <section className="pokemon-results">
+
+        <ul className="results" style={{"height" : "auto"}}>
+            {loading && <Loading/>}
+
+            {error && (
+                <div className="error-container">
+                    <h3 className="error-title">Something when wrong, please try again</h3>
+                    <p className="error-text sub-title">Please return to the previous page or reload the page</p>
+                </div>
+            )}
+
             {pokemons && (
-                <ul className="results" style={{"height" : "auto"}}>
+                    <>
             {pokemons.results.map((result) => {
                     return (            
                             <li className="list" key={result.name}>
@@ -29,9 +41,10 @@ const List = () => {
                             </li>         
                     )
                 })}
-                </ul>
+                </> 
             )
             }
+             </ul>
         </section>
         
         <section className="pagination">

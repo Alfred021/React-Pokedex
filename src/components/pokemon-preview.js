@@ -1,14 +1,18 @@
 import GetPokemonData from '../hooks/pokemonData.js';
-
+import Loading from './loading.js'
 
 const Preview = ({name}) => {
-    const { pokemon } = GetPokemonData(name)
+    const { pokemon, loading } = GetPokemonData(name)
 
     return (
         <>
+
+        <div>
+
+        {loading && <Loading/>}
+
         {pokemon && (   
-            <div>
-            
+            <>
                 {pokemon.map((result) => {
                     return (
                     <>
@@ -19,10 +23,9 @@ const Preview = ({name}) => {
                     </>
                     )
                 })}
-            
-            </div> 
+            </>
         )}
-
+        </div> 
         </>
     )
 }
